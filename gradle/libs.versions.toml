@@ -1,0 +1,67 @@
+[versions]
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+
+agp = "8.4.0"
+kotlin = "1.9.22"
+coreKtx = "1.12.0"
+appcompat = "1.6.1"
+material = "1.11.0"
+activity = "1.8.2"
+constraintlayout = "2.1.4"
+lottieAnim = "3.7.0"
+navFragmentKtx = "2.7.7"
+navUiKtx = "2.7.7"
+ktCoroutineAndroid = "1.7.3"
+glide = "4.16.0"
+lifeCycleVMKt = "2.7.0"
+lifeCycleRuntimekt = "2.7.0"
+lifeCycleLiveData = "2.7.0"
+timber = "5.0.1"
+squareRetrofit = "2.9.0"
+converterGson = "2.9.0"
+kotlinParcelize = "1.8.10"
+devtoolKSP = "1.9.22-1.0.16"
+navSafeArgs = "2.7.7"
+roomRuntime = "2.6.1"
+roomKtx = "2.6.1"
+roomCompiler = "2.6.1"
+sdpAndroid = "1.1.0"
+sspAndroid = "1.1.0"
+shimmer = "0.5.0"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+lottieAnim = { group = "com.airbnb.android", name = "lottie", version.ref = "lottieAnim" }
+navFragmentKtx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navFragmentKtx" }
+navUiKtx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navUiKtx" }
+ktCoroutineAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "ktCoroutineAndroid"}
+glide = { group = "com.github.bumptech.glide" , name = "glide", version.ref = "glide"}
+lifeCycleVMKt = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifeCycleVMKt"}
+lifeCycleRuntimekt = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifeCycleRuntimekt"}
+lifeCycleLiveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifeCycleLiveData"}
+timer = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber"}
+squareRetrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "squareRetrofit"}
+converterGson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson"}
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+androidx-room-compile = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }
+ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinParcelize"}
+devtoolsKSP = { id = "com.google.devtools.ksp", version.ref = "devtoolKSP"}
+navSafeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navSafeArgs"}

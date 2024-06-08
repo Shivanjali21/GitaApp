@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BhagavadGita</string>
+    <string name="shri_bhagavad_gita">Shri Bhagavad Gita</string>
+    <string name="text_chapters_tag">Chapters</string>
+    <string name="no_internet">No Internet! Please check your\ninternet connection.</string>
+    <string name="read_more">Read More</string>
+    <string name="read_less">Read Less</string>
+    <string name="translations_tag">Translations</string>
+    <string name="author_tag">Author :</string>
+    <string name="commentary_tag">Commentary</string>
+    <string name="saved_chapters_tag">Saved Chapters</string>
+    <string name="saved_verses_tag">Saved Verses</string>
+    <string name="no_chapters_saved">No chapters are saved! \nNext time save some chapter when you are online.</string>
+    <string name="no_verses_saved">No Verses are saved! \nNext time save some verses when you are online.</string>
+    \</resources>

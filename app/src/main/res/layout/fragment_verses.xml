@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragVersesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.fragments.verses.VersesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clVGita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVKalashOne"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/kalash"
+            android:layout_margin="@dimen/_4sdp"
+            app:layout_constraintEnd_toStartOf="@id/mtvVGitaName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVGitaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shri_bhagavad_gita"
+            android:textAlignment="center"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/sniglet_regular"
+            android:textColor="@color/colorOrange"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toStartOf="@id/ivVKalashTwo"
+            app:layout_constraintStart_toEndOf="@id/ivVKalashOne"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVKalashTwo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/kalash"
+            android:layout_margin="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mtvVGitaName"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVSettings"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/chakra"
+            android:layout_margin="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@id/ivVKalashTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvVersesChapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sniglet_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clVGita" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/ic_play"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/mtvVersesChapter"
+        app:layout_constraintTop_toBottomOf="@id/clVGita"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPause"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/ic_pause"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/mtvVersesChapter"
+        app:layout_constraintTop_toBottomOf="@id/clVGita"/>
+
+    <ProgressBar
+        android:id="@+id/proBar"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/colorOrange"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/mtvVersesChapter"
+        app:layout_constraintTop_toBottomOf="@id/clVGita"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/krsna"
+        android:alpha="0.14"
+        app:layout_constraintTop_toTopOf="@id/mtvVersesChapter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvVersesCName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/sniglet_regular"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/mtvVersesChapter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvVersesCDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:maxLines="4"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/sniglet_regular"
+        android:includeFontPadding="false"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginVertical="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/mtvVersesCName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvReadMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/read_more"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/colorBlue"
+        android:fontFamily="@font/sniglet_regular"
+        android:includeFontPadding="false"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/mtvVersesCDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvNoVerses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:padding="@dimen/_4sdp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/sniglet_regular"
+        android:includeFontPadding="false"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/mtvReadMore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVerses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mtvNoVerses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/rv_verses_item"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/versesShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/mtvNoVerses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shimmer_duration="800">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+            <include layout="@layout/shimmer_iv_verses"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_internet"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/colorRed"
+        android:fontFamily="@font/sniglet_regular"
+        android:includeFontPadding="false"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        app:layout_constraintTop_toTopOf="@id/rvVerses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

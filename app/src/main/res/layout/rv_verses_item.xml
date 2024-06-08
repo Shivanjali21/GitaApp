@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mcvVersesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardBackgroundColor="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/chapter_selector">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEditNotes"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:srcCompat="@drawable/ic_edit_note"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="@dimen/_2sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVersesNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16sdp"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorOrange"
+            android:fontFamily="@font/sniglet_regular"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mtvVersesDetail"
+            app:layout_constraintStart_toEndOf="@id/ivEditNotes" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivArrowNext"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_26sdp"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVersesDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivEditNotes" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBgOne"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:alpha="0.2"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/verse_top_right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBgTwo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:alpha="0.3"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/verse_chakra"
+            android:paddingTop="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBgThree"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:alpha="0.3"
+            app:srcCompat="@drawable/verse_bottom_left"
+            android:paddingTop="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@android:color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

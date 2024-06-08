@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mcvRootChapters"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_margin="@dimen/_6sdp"
+    app:strokeWidth="@dimen/_2sdp"
+    app:strokeColor="@color/colorOrange"
+    app:cardBackgroundColor="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/chapter_selector">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvChaptersNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFavourite"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:src="@drawable/ic_favourite"
+            android:layout_margin="@dimen/_4sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mtvCTitle"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFFavourite"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:src="@drawable/ic_fill_favourite"
+            android:layout_margin="@dimen/_4sdp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mtvCTitle"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvCTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorOrange"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/mtvChaptersNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvCDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_2sdp"
+            android:maxLines="4"
+            android:textColor="@color/colorGrey"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/mtvCTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivListMenu"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_list_menu"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtvCDescription"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvCVerseNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="@id/ivListMenu"
+            app:layout_constraintStart_toEndOf="@id/ivListMenu"
+            app:layout_constraintBottom_toBottomOf="@id/ivListMenu"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvCVerse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="@id/ivListMenu"
+            app:layout_constraintStart_toEndOf="@id/mtvCVerseNo"
+            app:layout_constraintBottom_toBottomOf="@id/ivListMenu"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOne"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/up_left"
+            android:scaleType="centerInside"
+            android:alpha="0.10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTwo"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/up_right"
+            android:scaleType="centerInside"
+            android:alpha="0.20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivThree"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_28sdp"
+            android:alpha="0.40"
+            android:src="@drawable/down_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/mtvCVerse"
+            app:layout_constraintStart_toEndOf="@id/ivListMenu"
+            android:background="@android:color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragVersesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.fragments.versedetail.VersesDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clVDGita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVDKalashOne"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/kalash"
+                android:layout_margin="@dimen/_4sdp"
+                app:layout_constraintEnd_toStartOf="@id/mtvVDGitaName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvVDGitaName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/shri_bhagavad_gita"
+                android:textAlignment="center"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/colorOrange"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:fontFamily="@font/sniglet_regular"
+                android:includeFontPadding="false"
+                app:layout_constraintEnd_toStartOf="@id/ivVDKalashTwo"
+                app:layout_constraintStart_toEndOf="@id/ivVDKalashOne"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVDKalashTwo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/kalash"
+                android:layout_margin="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mtvVDGitaName"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFavourite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:src="@drawable/ic_favourite"
+                android:layout_margin="@dimen/_4sdp"
+                app:layout_constraintStart_toEndOf="@id/ivVDKalashTwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFillFavourite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:src="@drawable/ic_fill_favourite"
+                android:layout_margin="@dimen/_4sdp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/ivVDKalashTwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/clVDGita"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:indeterminateTint="@color/colorOrange"
+            app:indicatorColor="@color/colorOrange"
+            app:layout_anchorGravity="bottom"
+            android:visibility="visible"
+            android:indeterminate="true"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/clVDGita"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVDKrsna"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/krsna"
+            android:alpha="0.14"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorOrange"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDTransliterationIfEng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDWordIfEng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDTransliterationIfEng"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVDView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/verse_view"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDWordIfEng"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:text="@string/translations_tag"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/ivVDView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDTranslation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:background="@drawable/bg_verse_card">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvVDAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author_tag"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/mtvVDAuthorDesc"
+                    android:layout_marginHorizontal="@dimen/_4sdp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvVDAuthorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorOrange"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/mtvVDAuthor"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvVDAuthorDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@id/mtvVDAuthor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabTLeft"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/mcvTranslation"
+            app:layout_constraintTop_toBottomOf="@id/mcvTranslation"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_arrow_left"
+            app:tint="@color/colorWhite"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorOrange"
+            android:contentDescription="@string/app_name"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabTRight"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/mcvTranslation"
+            app:layout_constraintTop_toBottomOf="@id/mcvTranslation"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="@color/colorWhite"
+            android:backgroundTint="@color/colorOrange"
+            android:contentDescription="@string/app_name"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvVDCommentary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:text="@string/commentary_tag"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:layout_marginVertical="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/mcvTranslation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvCommentary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:visibility="gone"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/mtvVDCommentary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:background="@drawable/bg_verse_card">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvCAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author_tag"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/mtvCAuthorDesc"
+                    android:layout_marginHorizontal="@dimen/_4sdp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvCAuthorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorOrange"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/mtvCAuthor"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvCAuthorDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toBottomOf="@id/mtvCAuthor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvReadMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_more"
+                    android:textSize="@dimen/_12ssp"
+                    android:maxLines="4"
+                    android:textColor="@color/colorBlue"
+                    android:fontFamily="@font/sniglet_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    app:layout_constraintTop_toBottomOf="@id/mtvCAuthorDesc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCLeft"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/mcvCommentary"
+            app:layout_constraintTop_toBottomOf="@id/mcvCommentary"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_arrow_left"
+            app:tint="@color/colorWhite"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorOrange"
+            android:contentDescription="@string/app_name"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCRight"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/mcvCommentary"
+            app:layout_constraintTop_toBottomOf="@id/mcvCommentary"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="@color/colorWhite"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorOrange"
+            android:contentDescription="@string/app_name"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorRed"
+            android:fontFamily="@font/sniglet_regular"
+            android:includeFontPadding="false"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/ivVDKrsna"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
